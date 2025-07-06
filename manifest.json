@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Cambridge Lookup Extension",
+  "version": "1.5",
+  "description": "Lookup selected text in Cambridge Dictionary via context menu, popup, or double-click. Now with English audio playback!",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://dictionary.cambridge.org/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cambridge Lookup"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sound_icon_cambridge.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

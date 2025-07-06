@@ -1,0 +1,38 @@
+/* content.css (English-Only Version) */
+
+:root {
+  --page-icon-size: 28px;
+  --page-icon-z-index: 2147483647;
+  --page-icon-bg-color: #ffffff;
+  --page-icon-border-radius: 50%;
+  --page-icon-padding: 5px;
+  --page-icon-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  --page-icon-hover-scale: 1.15;
+  --page-icon-transition-duration: 0.2s;
+  --cambridge-icon-bg-color: #e6ffe6;
+}
+
+.page-action-icon {
+  position: absolute;
+  z-index: var(--page-icon-z-index);
+  cursor: pointer;
+  width: var(--page-icon-size);
+  height: var(--page-icon-size);
+  background-color: var(--page-icon-bg-color);
+  border-radius: var(--page-icon-border-radius);
+  box-shadow: var(--page-icon-shadow);
+  padding: var(--page-icon-padding);
+  box-sizing: border-box;
+  transition: transform var(--page-icon-transition-duration) ease-in-out,
+              box-shadow var(--page-icon-transition-duration) ease-in-out;
+  object-fit: contain;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-action-icon:hover {
+  transform: scale(var(--page-icon-hover-scale));
+}
+
+#cambridge-lookup-icon {
+  background-color: var(--cambridge-icon-bg-color);
+}
